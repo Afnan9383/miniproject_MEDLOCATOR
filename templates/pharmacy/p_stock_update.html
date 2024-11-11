@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Form</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS for Styling -->
+    <style>
+        body {
+            background-color: #e9ecef;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            border: none;
+            background-color: #ffffff;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            border: 1px solid #ced4da;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .card-title {
+            color: #343a40;
+            font-weight: 600;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .text-center i {
+            margin-right: 8px;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            .container {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+                                                <a href="/view_medicine" class="btn btn-info">Back</a>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <h3 class="card-title text-center mb-4">Edit Medicine Details</h3>
+                        <form id="form1" name="form1" method="post" action="/update_medicine_post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="batchNo" class="form-label">Gulikede per</label>
+                                <input type="text" class="form-control" id="batchNo" name="med_name" value="{{ i.MEDICINE_NAME.Medicine_name }}"
+                                    placeholder="Enter Batch Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="batchNo" class="form-label">Batch Number</label>
+                                <input type="text" class="form-control" id="batchNo" name="batch_no" value="{{ i.Batch_no }}"
+                                    placeholder="Enter Batch Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dosage" class="form-label">Dosage</label>
+                                <input type="text" class="form-control" id="dosage" name="dosage" value="{{ i.Dosage }}"
+                                    placeholder="Enter Dosage" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" id="quantity" name="quantity" value="{{ i.Quantity }}"
+                                placeholder="Enter Quantity" required min="0">
+                            </div>
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label">Image</label>
+                                <input type="file" name="image" class="form-control" id="quantity">
+                            </div>
+                              <div class="mb-3">
+                                <label for="expiry" class="form-label">Expiry Date</label>
+                                <input type="date" class="form-control" id="expiry" name="expiry" placeholder="Enter expiry" value="{{ i.expire }}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <textarea class="form-control" required name="description" placeholder="Enter description">{{ i.description }}</textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Price</label>
+                                <input type="number" class="form-control" id="price" name="price" placeholder="Enter Price" value="{{ i.Price }}"
+                                    step="0.01" required min="0">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save"></i> Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <p class="footer-text mt4">Need Help? <a href="#">Contact Support</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

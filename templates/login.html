@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Login Page</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/pexels-asphotograpy-105028.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  form {
+    background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+  }
+  table {
+    width: 100%;
+  }
+  td {
+    padding: 10px;
+  }
+  input[type="text"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none;
+  }
+  input[type="submit"] {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+</style>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/logincode">
+  <table>
+    <tr>
+      <td>Username</td>
+      <td><input type="text" name="textfield" required /></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><input type="password" name="textfield2" required /></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Login"/>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: right;">
+        <a href="/pharmacy_signup">Pharmacy Signup</a>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

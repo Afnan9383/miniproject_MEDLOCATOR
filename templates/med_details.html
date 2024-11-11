@@ -1,0 +1,443 @@
+
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogani | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../static/home_page/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/home_page/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/home_page/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../static/home_page/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../static/home_page/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/home_page/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/home_page/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/home_page/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="../static/home_page/img/logo.png" alt=""></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+            </ul>
+            <div class="header__cart__price">item: <span>$150.00</span></div>
+        </div>
+        <div class="humberger__menu__widget">
+            <div class="header__top__right__language">
+                <img src="../static/home_page/img/language.png" alt="">
+                <div>English</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                    <li><a href="#">Spanis</a></li>
+                    <li><a href="#">English</a></li>
+                </ul>
+            </div>
+            <div class="header__top__right__auth">
+                <a href="#"><i class="fa fa-user"></i> Login</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+{#                <li class="active"><a href="./index.html">Home</a></li>#}
+{#                <li><a href="./shop-grid.html">Shop</a></li>#}
+{#                <li><a href="#">Pages</a>#}
+{#                    <ul class="header__menu__dropdown">#}
+{#                        <li><a href="./shop-details.html">Shop Details</a></li>#}
+{#                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>#}
+{#                        <li><a href="./checkout.html">Check Out</a></li>#}
+{#                        <li><a href="./blog-details.html">Blog Details</a></li>#}
+{#                    </ul>#}
+{#                </li>#}
+{#                <li><a href="./blog.html">Blog</a></li>#}
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                <li>Free Shipping for all Order of $99</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <span style="font-size: larger;font-family: ">MedLocator</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="loginpage">Login</a></li>
+{#                            <li><a href="#">Pages</a>#}
+{#                                <ul class="header__menu__dropdown">#}
+{#                                    <li><a href="./shop-details.html">Shop Details</a></li>#}
+{#                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>#}
+{#                                    <li><a href="./checkout.html">Check Out</a></li>#}
+{#                                    <li><a href="./blog-details.html">Blog Details</a></li>#}
+{#                                </ul>#}
+{#                            </li>#}
+{#                            <li><a href="./blog.html">Blog</a></li>#}
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+
+
+
+
+    <!-- Latest Product Section Begin -->
+    <section class="latest-product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-6">
+                    <div class="latest-product__text">
+                        <h4>Available Products</h4>
+                        <div class="latest-product__slider owl-carousel">
+                            <div class="latest-prdouct__slider__item">
+                                <div class="row">
+                                    {% for i in med %}
+                <div class="col-lg-4 col-md-6">
+                                <a href="/med_details/{{ i.id }}" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <a href=""><img src="{{ i.MEDICINE_NAME.image }}" alt=""></a>
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>{{ i.MEDICINE_NAME.Medicine_name }}</h6>
+                                        <span>{{ i.Dosage }}</span>
+                                        <span>{{ i.expire }}</span>
+                                        <span>₹{{ i.Price }}.00</span>
+
+
+
+                                    </div>
+                                </a>
+                </div>
+                                    {% endfor %}
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Latest Product Section End -->
+
+    <!-- Blog Section Begin -->
+{#    <section class="from-blog spad">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-lg-12">#}
+{#                    <div class="section-title Pharmacy Details">#}
+{#                        <h2>Pharmacy Details</h2>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="col-lg-4 col-md-4 col-sm-6">#}
+{##}
+{#                </div>#}
+{#                <div class="col-lg-4 col-md-4 col-sm-6">#}
+{#                    <div class="blog__item">#}
+{#                        <div class="blog__item__pic">#}
+{#                            <img src="{{ ph.Image.url }}" alt="">#}
+{#                        </div>#}
+{#                        <div class="blog__item__text">#}
+{#                           #}
+{#                            <h5><a href="#">{{ ph.Name }}</a></h5>#}
+{#                                <h5><a href="#">{{ ph.Place }}</a></h5>#}
+{#                            <h5><a href="#">{{ ph.Post }}</a></h5>#}
+{#                            <h5><a href="#">{{ ph.Pincode }}</a></h5>#}
+{#                            <h5><a href="#">{{ ph.Phone_no }}</a></h5>#}
+{#                            <h5><a href="#">{{ ph.Email }}</a></h5>#}
+{##}
+{##}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
+
+
+
+
+
+
+
+
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Details</title>
+</head>
+<body>
+
+{#    <section class="medicine-details">#}
+{#        <div class="container">#}
+{#            <h2>{{ medicine.Medicine_name }}</h2>#}
+{##}
+{##}
+{#            <div class="medicine-info">#}
+{#                <img src="{{ medicine.image }}" alt="Image of {{ medicine.Medicine_name }}" style="width:200px; height:auto;">#}
+{#                <p><strong>Category:</strong> {{ medicine.CATEGORY.Category }}</p>#}
+{#                <p><strong>Pharmacy:</strong> {{ pharmacy.Name }}</p>#}
+{#                <p><strong>Place:</strong> {{ pharmacy.Place }}</p>#}
+{#                <p><strong>Pincode:</strong> {{ pharmacy.Pincode }}</p>#}
+{#                <p><strong>Phone:</strong> {{ pharmacy.Phone_no }}</p>#}
+{#<a href="https://www.google.com/maps/search/?api=1&query={{ pharmacy.Latitude }},{{ pharmacy.Longitude }}" target="_blank">#}
+{#    View on Google Maps#}
+{#</a>#}
+{##}
+{#            </div>#}
+{#        <br>#}
+{#        <br>#}
+{##}
+{#            <h3>Stock Information</h3>#}
+{#            {% if stock_data %}#}
+{#                <table class="table">#}
+{#                    <thead>#}
+{#                        <tr>#}
+{#                            <th>Batch No</th>#}
+{#                            <th>Dosage</th>#}
+{#                            <th>Expire</th>#}
+{#                            <th>Description</th>#}
+{#                            <th>Quantity</th>#}
+{#                            <th>Price</th>#}
+{#                        </tr>#}
+{#                    </thead>#}
+{#                    <tbody>#}
+{#                        {% for stock in stock_data %}#}
+{#                            <tr>#}
+{#                                <td>{{ stock.Batch_no }}</td>#}
+{#                                <td>{{ stock.Dosage }}</td>#}
+{#                                <td>{{ stock.expire }}</td>#}
+{#                                <td>{{ stock.description }}</td>#}
+{#                                <td>{{ stock.Quantity }}</td>#}
+{#                                <td>${{ stock.Price }}</td>#}
+{#                            </tr>#}
+{#                        {% endfor %}#}
+{#                    </tbody>#}
+{#                </table>#}
+{#            {% else %}#}
+{#                <p>No stock available for this medicine.</p>#}
+{#            {% endif %}#}
+{#        </div>#}
+{#    </section>#}
+
+
+{#<section class="medicine-details py-5">#}
+{#    <div class="container">#}
+{#        <!-- Medicine Header -->#}
+{#        <div class="row align-items-center mb-4">#}
+{#            <div class="col-md-4">#}
+{#                <img src="{{ medicine.image }}" alt="Image of {{ medicine.Medicine_name }}" class="img-fluid rounded" style="max-width: 100%; height: auto;">#}
+{#            </div>#}
+{#            <div class="col-md-8">#}
+{#                <h2 class="font-weight-bold">{{ medicine.Medicine_name }}</h2>#}
+{#                <p><strong>Category:</strong> {{ medicine.CATEGORY.Category }}</p>#}
+{#                <p><strong>Pharmacy:</strong> {{ pharmacy.Name }}</p>#}
+{#                <p><strong>Place:</strong> {{ pharmacy.Place }}</p>#}
+{#                <p><strong>Pincode:</strong> {{ pharmacy.Pincode }}</p>#}
+{#                <p><strong>Phone:</strong> {{ pharmacy.Phone_no }}</p>#}
+{#                <a href="https://www.google.com/maps/search/?api=1&query={{ pharmacy.Latitude }},{{ pharmacy.Longitude }}" target="_blank" class="btn btn-primary mt-2">#}
+{#                    View on Google Maps#}
+{#                </a>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <!-- Stock Information -->#}
+{#        <h3 class="mb-4">Stock Information</h3>#}
+{#        {% if stock_data %}#}
+{#            <div class="table-responsive">#}
+{#                <table class="table table-striped table-bordered">#}
+{#                    <thead class="thead-dark">#}
+{#                        <tr>#}
+{#                            <th>Batch No</th>#}
+{#                            <th>Dosage</th>#}
+{#                            <th>Expire</th>#}
+{#                            <th>Description</th>#}
+{#                            <th>Quantity</th>#}
+{#                            <th>Price</th>#}
+{#                        </tr>#}
+{#                    </thead>#}
+{#                    <tbody>#}
+{#                        {% for stock in stock_data %}#}
+{#                            <tr>#}
+{#                                <td>{{ stock.Batch_no }}</td>#}
+{#                                <td>{{ stock.Dosage }}</td>#}
+{#                                <td>{{ stock.expire }}</td>#}
+{#                                <td>{{ stock.description }}</td>#}
+{#                                <td>{{ stock.Quantity }}</td>#}
+{#                                <td>₹{{ stock.Price }}</td>#}
+{#                            </tr>#}
+{#                        {% endfor %}#}
+{#                    </tbody>#}
+{#                </table>#}
+{#            </div>#}
+{#        {% else %}#}
+{#            <p class="text-muted">No stock available for this medicine.</p>#}
+{#        {% endif %}#}
+{#    </div>#}
+{#</section>#}
+
+
+<section class="medicine-details py-5">
+    <div class="container">
+        <!-- Medicine Header -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                                <img src="{{ pharmacy.Image.url }}" alt="Image of {{ pharmacy.Name }}" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+
+            </div>
+            <div class="col-md-8">
+                <h2 class="font-weight-bold">{{ medicine.Medicine_name }}</h2>
+                <p><strong>Category:</strong> {{ medicine.CATEGORY.Category }}</p>
+                <p><strong>Pharmacy:</strong> {{ pharmacy.Name }}</p>
+                <p><strong>Place:</strong> {{ pharmacy.Place }}</p>
+                <p><strong>Pincode:</strong> {{ pharmacy.Pincode }}</p>
+                <p><strong>Phone:</strong> {{ pharmacy.Phone_no }}</p>
+                <a href="https://www.google.com/maps/search/?api=1&query={{ pharmacy.Latitude }},{{ pharmacy.Longitude }}" target="_blank" class="btn btn-primary mt-2">
+                    View on Google Maps
+                </a>
+            </div>
+        </div>
+
+        <!-- Pharmacy Image -->
+{#        <div class="row mb-4">#}
+{#            <div class="col-md-4">#}
+{#                <h4>Pharmacy Image</h4>#}
+{#                <img src="{{ pharmacy.Image.url }}" alt="Image of {{ pharmacy.Name }}" class="img-fluid rounded" style="max-width: 100%; height: auto;">#}
+{#            </div>#}
+{#        </div>#}
+
+        <!-- Stock Information -->
+        <h3 class="mb-4">Stock Information</h3>
+        {% if stock_data %}
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Batch No</th>
+                            <th>image</th>
+                            <th>Dosage</th>
+                            <th>Expire</th>
+                            <th>Description</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for stock in stock_data %}
+                            <tr>
+                                <td>{{ stock.Batch_no }}</td>
+                                <td><img src="{{ medicine.image }}" width="200px" height="200px"> </td>
+                                <td>{{ stock.Dosage }}</td>
+                                <td>{{ stock.expire }}</td>
+                                <td>{{ stock.description }}</td>
+                                <td>{{ stock.Quantity }}</td>
+                                <td>₹{{ stock.Price }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <p class="text-muted">No stock available for this medicine.</p>
+        {% endif %}
+    </div>
+</section>
+
+
+</body>
+</html>
+
+    <!-- Blog Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+{#                        <div class="footer__about__logo">#}
+{#                            <a href="./index.html"><img src="../static/home_page/img/logo.png" alt=""></a>#}
+{#                        </div>#}
+{#                      #}
+                    </div>
+                </div>
+            </div>
+        </div>
+{#           </    #}
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="../static/home_page/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/home_page/js/bootstrap.min.js"></script>
+    <script src="../static/home_page/js/jquery.nice-select.min.js"></script>
+    <script src="../static/home_page/js/jquery-ui.min.js"></script>
+    <script src="../static/home_page/js/jquery.slicknav.js"></script>
+    <script src="../static/home_page/js/mixitup.min.js"></script>
+    <script src="../static/home_page/js/owl.carousel.min.js"></script>
+    <script src="../static/home_page/js/main.js"></script>
+
+
+
+</body>
+
+</html>
